@@ -1,53 +1,21 @@
 $().ready(function(){
-  $('.right').on('mousedown', moveObjectR);
+  $('.right').on('mousedown', function(){moveObject.call(this, 'right')});
 
-  $('.left').on('mousedown', moveObjectL);
+  $('.left').on('mousedown', function(){moveObject.call(this, 'left')});
 
-  $('.top').on('mousedown', moveObjectT);
+  $('.top').on('mousedown', function(){moveObject.call(this, 'top')});
 
-  $('.bottom').on('mousedown', moveObjectB);
+  $('.bottom').on('mousedown', function(){moveObject.call(this, 'bottom')});
 
-  $('.topright').on('mousedown', moveObjectTR);
+  $('.topright').on('mousedown', function(){moveObject.call(this, 'topright')});
 
-  $('.topleft').on('mousedown', moveObjectTL);
+  $('.topleft').on('mousedown', function(){moveObject.call(this, 'topleft')});
 
-  $('.bottomright').on('mousedown', moveObjectBR);
+  $('.bottomright').on('mousedown', function(){moveObject.call(this, 'bottomright')});
 
-  $('.bottomleft').on('mousedown', moveObjectBL);
+  $('.bottomleft').on('mousedown', function(){moveObject.call(this, 'bottomleft')});
 
 });
-
-function moveObjectR() {
-  moveObject.call(this, 'right');
-}
-
-function moveObjectL() {
-  moveObject.call(this, 'left');
-}
-
-function moveObjectT() {
-  moveObject.call(this, 'top');
-}
-
-function moveObjectB() {
-  moveObject.call(this, 'bottom');
-}
-
-function moveObjectTR() {
-  moveObject.call(this, 'topright');
-}
-
-function moveObjectTL() {
-  moveObject.call(this, 'topleft');
-}
-
-function moveObjectBR() {
-  moveObject.call(this, 'bottomright');
-}
-
-function moveObjectBL() {
-  moveObject.call(this, 'bottomleft');
-}
 
 function moveObject (dir){
   switch (dir) {
